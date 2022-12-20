@@ -1,0 +1,11 @@
+.header {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  background-color: #344966;
+  color: white;
+}
+
+.ghIcon {
+  font-size: 1.5rem;
+}
