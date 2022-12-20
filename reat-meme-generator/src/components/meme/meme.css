@@ -21,3 +21,9 @@
   font-weight: 500;
   border-radius: 0.4rem;
 }
+
+.memeImg {
+  box-sizing: border-box;
+  padding: 1rem;
+  max-width: 100%;
+}
