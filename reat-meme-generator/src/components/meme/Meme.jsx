@@ -7,7 +7,7 @@ import "./meme.css";
 //     "https://i.imgflip.com/30b1gx.jpg"
 //   );
 const Meme = () => {
-  const [meme, setmeme] = useState({
+  const [meme, setMeme] = useState({
     topText: "",
     botText: "",
     randomImage: "https://i.imgflip.com/30b1gx.jpg",
@@ -19,7 +19,7 @@ const Meme = () => {
     const memesArray = allMemeImages.data.memes;
     const rng = Math.floor(Math.random() * memesArray.length);
     const url = memesArray[rng].url;
-    setmeme((prevMeme) => ({
+    setMeme((prevMeme) => ({
       ...prevMeme,
       randomImage: url,
     }));
@@ -40,16 +40,16 @@ const Meme = () => {
           placeholder="Top text"
           className="input"
           name="topText"
-          value={meme.topText}
           onChange={handleChange}
+          value={meme.topText}
         />
         <input
           type="text"
           placeholder="Bottom text"
           className="input"
           name="botText"
-          value={meme.botText}
           onChange={handleChange}
+          value={meme.botText}
         />
         <input
           type="button"
