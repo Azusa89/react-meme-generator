@@ -1,7 +1,7 @@
 .container {
   width: 50%;
   min-width: 400px;
-  height: 80vh;
+  height: fit-content;
   background-color: #f0f4ef;
   margin: auto;
 }

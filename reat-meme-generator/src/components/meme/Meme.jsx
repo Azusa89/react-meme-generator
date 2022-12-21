@@ -24,22 +24,32 @@ const Meme = () => {
       randomImage: url,
     }));
   }
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      [name]: value,
+    }));
+  }
   return (
     <>
       <form className="generatorForm">
         <input
-          className="input"
           type="text"
-          id="top-txt"
-          name="top-txt"
           placeholder="Top text"
+          className="input"
+          name="topText"
+          value={meme.topText}
+          onChange={handleChange}
         />
         <input
-          className="input"
           type="text"
-          id="bot-txt"
-          name="bot-txt"
           placeholder="Bottom text"
+          className="input"
+          name="botText"
+          value={meme.botText}
+          onChange={handleChange}
         />
         <input
           type="button"
@@ -50,8 +60,8 @@ const Meme = () => {
       </form>
       <div className="meme">
         <img src={meme.randomImage} alt="" className="memeImg" />
-        <h2 className="meme-txt top">top text</h2>
-        <h2 className="meme-txt bot">bottom text</h2>
+        <h2 className="meme-txt top">{meme.topText}</h2>
+        <h2 className="meme-txt bot">{meme.botText}</h2>
       </div>
     </>
   );
