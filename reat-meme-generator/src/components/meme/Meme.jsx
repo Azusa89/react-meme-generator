@@ -48,7 +48,11 @@ const Meme = () => {
           onClick={getMemeImage}
         />
       </form>
-      <img src={meme.randomImage} alt="" className="memeImg" />
+      <div className="meme">
+        <img src={meme.randomImage} alt="" className="memeImg" />
+        <h2 className="meme-txt top">top text</h2>
+        <h2 className="meme-txt bot">bottom text</h2>
+      </div>
     </>
   );
 };

@@ -22,8 +22,35 @@
   border-radius: 0.4rem;
 }
 
-.memeImg {
-  box-sizing: border-box;
+.meme {
+  position: relative;
   padding: 2rem;
+  box-sizing: border-box;
+}
+
+.memeImg {
   max-width: 100%;
+}
+
+.meme-txt {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-size: 2em;
+  font-family: Impact, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 2px black;
+}
+
+.meme-txt.top {
+  top: 2rem;
+}
+.meme-txt.bot {
+  bottom: 2rem;
 }
