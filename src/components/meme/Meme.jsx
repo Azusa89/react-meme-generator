@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./meme.css";
+import Draggable from "react-draggable";
 
 // const Meme = () => {
 //   const [memeimage, setmemeimage] = useState(
@@ -64,8 +65,12 @@ const Meme = () => {
       </form>
       <div className="meme">
         <img src={meme.randomImage} alt="" className="memeImg" />
-        <h2 className="meme-txt top">{meme.topText}</h2>
-        <h2 className="meme-txt bot">{meme.botText}</h2>
+        <Draggable>
+          <h2 className="meme-txt top">{meme.topText}</h2>
+        </Draggable>
+        <Draggable>
+          <h2 className="meme-txt bot">{meme.botText}</h2>
+        </Draggable>
       </div>
     </>
   );
