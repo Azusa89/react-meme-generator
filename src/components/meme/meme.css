@@ -26,10 +26,13 @@
   position: relative;
   padding: 2rem;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 .memeImg {
   max-width: 100%;
+  padding: 0 auto;
 }
 
 .meme-txt {
